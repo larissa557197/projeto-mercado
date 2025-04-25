@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.hibernate.validator.constraints.Range;
 
-import com.br.fiap.projeto_mercado.model.Item;
+import com.br.fiap.projeto_mercado.model.item.Item;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.CascadeType;
@@ -16,7 +16,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import jakarta.validation.constraints.Max;
+// import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -28,6 +28,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Personagem {
 
     @Id
@@ -58,56 +60,7 @@ public class Personagem {
         this.moedas = moedas;
     }
 
-    public Personagem() {
-    }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Classe getClasse() {
-        return classe;
-    }
-
-    public void setClasse(Classe classe) {
-        this.classe = classe;
-    }
-
-    public Integer getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(Integer nivel) {
-        this.nivel = nivel;
-    }
-
-    public BigDecimal getMoedas() {
-        return moedas;
-    }
-
-    public void setMoedas(BigDecimal moedas) {
-        this.moedas = moedas;
-    }
-
-    public List<Item> getItens() {
-        return itens;
-    }
-
-    public void setItens(Item itens) {
-        this.itens.add(itens);
-    }
     
 
 
