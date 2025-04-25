@@ -59,10 +59,4 @@ public class Personagem {
         this.nivel = nivel;
         this.moedas = moedas;
     }
-
-
-    
-
-
-
 }

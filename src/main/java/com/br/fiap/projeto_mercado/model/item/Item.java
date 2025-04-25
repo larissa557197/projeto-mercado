@@ -23,7 +23,7 @@ import jakarta.validation.constraints.NotNull;
 @Entity
 public class Item {
 
-     @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

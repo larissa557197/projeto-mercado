@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.actions.GetbyAction;
+import com.br.fiap.projeto_mercado.actions.GetbyAction;
 import com.br.fiap.projeto_mercado.model.personagem.Personagem;
 import com.br.fiap.projeto_mercado.repository.PersonagemRepository;
 import com.br.fiap.projeto_mercado.specification.PersonagemSpecification;

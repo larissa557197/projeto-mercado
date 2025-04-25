@@ -1,4 +1,4 @@
-package com.actions;
+package com.br.fiap.projeto_mercado.actions;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
