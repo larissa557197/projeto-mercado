@@ -1,0 +1,204 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1741358636664
+  modified: 1741358636664
+collection:
+  - name: skill match
+    meta:
+      id: fld_19857db0464346a68f93711a722f693e
+      created: 1744249243381
+      modified: 1744249243381
+      sortKey: -1744249243381
+  - name: fin money
+    meta:
+      id: fld_6ead42a5970d457bbe554ab71d14561d
+      created: 1744377832477
+      modified: 1744377832477
+      sortKey: -1744377832477
+  - name: mercado
+    meta:
+      id: fld_dabfeeca5e7244b1abf78427f7bccc7f
+      created: 1745587102781
+      modified: 1745587102781
+      sortKey: -1745587102781
+    children:
+      - url: http://localhost:8080/personagens
+        name: get - persona
+        meta:
+          id: req_15c910fb935e4e2684c66073ddd77c35
+          created: 1745587105630
+          modified: 1745588502108
+          isPrivate: false
+          sortKey: -1745587105630
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/personagens
+        name: porst - persona
+        meta:
+          id: req_86b2308959e14fe9987c747d2d053166
+          created: 1745587119923
+          modified: 1745588734176
+          isPrivate: false
+          sortKey: -1745587119923
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "nome": "Luna",
+              "classe": "MAGO",
+              "nivel": 35,
+              "moedas": 250
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/item
+        name: criando um item com dono
+        meta:
+          id: req_cf1a4a81aeaf4b77a531e16b868f83ed
+          created: 1745588763215
+          modified: 1745588809581
+          isPrivate: false
+          sortKey: -1745588763215
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "nome": "Espada Flamejante",
+              "tipo": "ARMA",
+              "raridade": "EPICO",
+              "preco": 100,
+              "dono": {
+                "id": 1
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/item
+        name: buscando itens
+        meta:
+          id: req_c41f472c36f647fa81e8652c1e08a1c0
+          created: 1745588819577
+          modified: 1745588828307
+          isPrivate: false
+          sortKey: -1745588819577
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/personagens?nome=Luna
+        name: buscar personagem por nome
+        meta:
+          id: req_09631c35aa364ad6a4cd353e6d348513
+          created: 1745588850689
+          modified: 1745588937860
+          isPrivate: false
+          sortKey: -1745588850689
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/item?raridadeLENDARIO
+        name: buscar item por raridade
+        meta:
+          id: req_5d38ea87ee024b32ad9744564e939f46
+          created: 1745588962264
+          modified: 1745589144421
+          isPrivate: false
+          sortKey: -1745588962264
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/item?tipo=ARMA
+        name: buscar item por tipo
+        meta:
+          id: req_e07c97f6eb434595bc83a1c17dfcd08c
+          created: 1745589177691
+          modified: 1745589200609
+          isPrivate: false
+          sortKey: -1745589177691
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1741358643352
+    modified: 1741358643352
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1741358643236
+    modified: 1741358643236
+    isPrivate: false
